@@ -11,7 +11,7 @@ export function CertificationCard({ title, organization, image, bgColor = "bg-gr
   return (
     <Card className="overflow-hidden">
       <div className={`${bgColor} p-8 flex items-center justify-center`}>
-        <img src={image || "/placeholder.svg"} alt={title} className="h-24 object-contain" />
+        <img src={image || "/placeholder.svg"} alt={title} className="h-80 object-contain" />
       </div>
       <CardHeader>
         <CardTitle className="text-xl">{title}</CardTitle>

@@ -1,14 +1,14 @@
 import { useState } from "react"
 import { Link, Outlet, useLocation } from "react-router-dom"
-import { Menu  } from "lucide-react"
+import { Menu, Linkedin } from "lucide-react" // Import the Linkedin icon
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from "@/components/ui/sheet"
+
 
 const navigation = [
   { name: "Skills", href: "/skills" },
   { name: "Projects", href: "/projects" },
-  { name: "Certifications", href: "/certifications" },
-  { name: "Contact Me", href: "/contact" },
+  { name: "CiLinkedin", href: "https://www.linkedin.com/in/ademola-abdul", icon: <Linkedin className="w-6 h-6" /> }
 ]
 
 export function Layout() {
@@ -35,15 +35,25 @@ export function Layout() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex md:gap-8">
               {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`transition-colors hover:text-primary ${
-                    isActive(item.href) ? "text-primary font-medium" : "text-muted-foreground"
-                  }`}
-                >
-                  {item.name}
-                </Link>
+                item.icon ? (  // Check if the item has an icon
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`transition-colors hover:text-primary ${isActive(item.href) ? "text-primary font-medium" : "text-muted-foreground"}`}
+                  >
+                    {item.icon}  {/* Display the icon */}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`transition-colors hover:text-primary ${isActive(item.href) ? "text-primary font-medium" : "text-muted-foreground"}`}
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
             </div>
 
@@ -62,14 +72,23 @@ export function Layout() {
                 <div className="mt-6 flex flex-col gap-4">
                   {navigation.map((item) => (
                     <SheetClose asChild key={item.name}>
-                      <Link
-                        to={item.href}
-                        className={`flex items-center gap-2 text-lg transition-colors hover:text-primary ${
-                          isActive(item.href) ? "text-primary font-medium" : "text-muted-foreground"
-                        }`}
-                      >
-                        {item.name}
-                      </Link>
+                      {item.icon ? (  // If the item has an icon, display it as a link
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`flex items-center gap-2 text-lg transition-colors hover:text-primary ${isActive(item.href) ? "text-primary font-medium" : "text-muted-foreground"}`}
+                        >
+                          {item.icon}
+                        </a>
+                      ) : (
+                        <Link
+                          to={item.href}
+                          className={`flex items-center gap-2 text-lg transition-colors hover:text-primary ${isActive(item.href) ? "text-primary font-medium" : "text-muted-foreground"}`}
+                        >
+                          {item.name}
+                        </Link>
+                      )}
                     </SheetClose>
                   ))}
                 </div>
@@ -84,4 +103,3 @@ export function Layout() {
     </div>
   )
 }
-
