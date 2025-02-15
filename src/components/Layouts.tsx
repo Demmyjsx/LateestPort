@@ -1,14 +1,15 @@
 import { useState } from "react"
 import { Link, Outlet, useLocation } from "react-router-dom"
-import { Menu, Linkedin } from "lucide-react" // Import the Linkedin icon
+import { Menu, Linkedin, Github, } from "lucide-react" // Import the Linkedin icon
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from "@/components/ui/sheet"
 
 
 const navigation = [
-  { name: "Skills", href: "/skills" },
-  { name: "Projects", href: "/projects" },
-  { name: "CiLinkedin", href: "https://www.linkedin.com/in/ademola-abdul", icon: <Linkedin className="w-6 h-6" /> }
+
+  { name: "LinkedIn" , href: "https://www.linkedin.com/in/ademola-abdul", icon: <Linkedin className="w-6 h-7" /> },
+  { name: "Github", href: "https://github.com/Demmyjsx", icon: <Github className="w-6 h-7" /> },
+
 ]
 
 export function Layout() {

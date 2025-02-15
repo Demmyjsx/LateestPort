@@ -24,7 +24,7 @@ export function Contact() {
                 <p>Open for opportunities: Yes</p>
                 <div className="flex gap-4 mt-6">
                   <a
-                    href="https://github.com"
+                    href="https://github.com/Demmyjsx"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 hover:bg-gray-100 rounded-full"

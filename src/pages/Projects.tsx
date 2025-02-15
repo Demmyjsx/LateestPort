@@ -1,5 +1,5 @@
 import { ProjectCard } from "@/components/ProjectCard";
-import { Contact } from "./Contact";
+
 
 
 const projects = [
@@ -47,7 +47,7 @@ export function Projects() {
           
         ))}
       </div>
-      <Contact />
+     
     </div>
   )
 }

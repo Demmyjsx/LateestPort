@@ -4,6 +4,8 @@ import { Skills } from "@/pages/Skills"
 import { Link } from "react-router-dom"
 
 import { Certifications } from "./Certifications"
+import { Projects } from "./Projects"
+import { Contact } from "./Contact"
 export function Home() {
   return (
     <main className="container mx-auto px-4 py-12">
@@ -69,11 +71,14 @@ export function Home() {
         {/* Skills content will go here */}
         <Skills />
         
-
-
-
-     
         <Certifications />
+
+        <Projects />
+
+
+        <Contact />
+     
+
      </section>
     </main>
   )
