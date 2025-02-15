@@ -11,8 +11,9 @@ const skills = [
   { name: "PostgreSQL", icon: "/assets/PostgreSQ.jpeg" },
   { name: "Postman", icon: "assets/Postman.jpeg" },
   { name: "Git", icon: "assets/Git.png" },
-  { name: "Netlify", icon: "assets/netlify.png" },
+
   { name: "vercel", icon: "assets/vercel.png" },
+  { name: "framer", icon: "assets/framer.png" },
 
 ]
 
