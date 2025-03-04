@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import { Menu, Linkedin, Github, CirclePower } from "lucide-react";
+import { Menu, Linkedin, Github, } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 
@@ -18,16 +18,9 @@ export function Layout() {
     return location.pathname === path;
   };
 
-  // State for toggling background color
-  const [isDark, setIsDark] = useState(false);
-
-  // Function to toggle dark/light mode
-  const toggleBackground = () => {
-    setIsDark(!isDark);
-  };
-
+ 
   return (
-    <div className={`min-h-screen ${isDark ? 'bg-black text-white' : 'bg-white text-black'}`} style={{ transition: 'background-color 0.3s ease, color 0.3s ease' }}>
+    <div  style={{ transition: 'background-color 0.3s ease, color 0.3s ease' }}>
       <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <div className="container mx-auto px-4">
           <nav className="flex h-16 items-center justify-between">
