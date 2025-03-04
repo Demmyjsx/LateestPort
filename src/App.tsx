@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Layout } from "./components/Layouts"
 import { Home } from "./pages/Home"
+
+
 import Nopage from "./pages/Nopage"
 import { Projects } from "./pages/Projects"
 import { Certifications } from "./pages/Certifications"

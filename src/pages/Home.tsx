@@ -1,12 +1,15 @@
 import { Github, Linkedin } from "lucide-react"
 import man from "/assets/manOnTable.a15c230b.svg"
 import { Skills } from "@/pages/Skills"
-import { Link } from "react-router-dom"
+
 
 import { Certifications } from "./Certifications"
 import { Projects } from "./Projects"
 import { Contact } from "./Contact"
 export function Home() {
+
+
+  
   return (
     <main className="container mx-auto px-4 py-12">
       <section id="#About">
@@ -16,6 +19,9 @@ export function Home() {
            
                 <h1 className="text-6xl font-bold">Hi everyone, I&apos;m DemmyTsx</h1>
                 <p className="text-2xl text-gray-600"> | Software Engineer | React | Javascript | typescript | Node |</p>
+                <p>I am a dedicated and enthusiastic Frontend Developer with a strong foundation in web development fundamentals and experience with various frameworks and libraries. I am passionate about collaborating with experienced teams to deliver user-friendly, visually appealing, and high-performance websites.
+
+Fast forward to today, I’m still learning. But this time, not to break things! Now, I’ve taken on a different role, one of an engineer and problem solver, building solutions and creating value.</p>
                 <div className="flex gap-4">
                   <a
                     href="https://github.com/Demmyjsx"
@@ -44,12 +50,7 @@ export function Home() {
                     </svg>
                   </a> */}
                 </div>
-                <div className="flex gap-4">
-                  <Link to="/project"  className="bg-[#002147] hover:bg-[#002147]/90 text-white p-4 rounded">
-                    CONTACT ME
-                  </Link>
-                
-                </div>
+               
 
           
 
